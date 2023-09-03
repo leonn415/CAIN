@@ -1,6 +1,8 @@
 # Don't track content of these folders
 game/cache/
 game/saves/
+saves/
+cache/
 __pycache__/
 
 
