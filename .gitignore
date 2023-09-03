@@ -1,0 +1,28 @@
+# Don't track content of these folders
+game/cache/
+game/saves/
+__pycache__/
+
+
+# Compiled sources
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+*.rpyc
+*.rpymc
+
+
+# The log file and other misc things #
+######################################
+log.txt
+errors.txt
+traceback.txt
+files.txt
+
+# IDEs
+/.vscode
+/.idea
