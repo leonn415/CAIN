@@ -3,7 +3,6 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define n = Character()
 define s = Character("Soldier")
 define i = Character(what_italic = True)
 define y = Character("Young Woman")
@@ -27,7 +26,7 @@ label start:
 
     # These display lines of dialogue.
 
-    n "The Young Woman struggles to place the Soldier's supper on the table"
+    "The Young Woman struggles to place the Soldier's supper on the table"
 
     menu:
         "Are you single?":
@@ -40,7 +39,7 @@ label start:
     label choice1:
         y "..."
 
-    n "You've forgotten how incompetent you are with women and think you should shut up now and accept your fate as being some sort of sacrificial lamb for this village."
+    "You've forgotten how incompetent you are with women and think you should shut up now and accept your fate as being some sort of sacrificial lamb for this village."
 
     # This ends the game.
 
