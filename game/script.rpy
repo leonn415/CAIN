@@ -6,6 +6,7 @@
 define s = Character("Soldier")
 define i = Character(what_italic = True)
 define y = Character("Young Woman")
+define v = Character("Villager")
 
 
 # The game starts here.
