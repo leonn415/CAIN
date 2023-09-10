@@ -6,6 +6,7 @@
 define s = Character("Soldier")
 define i = Character(what_italic = True)
 define y = Character("Young Woman")
+define v = Character("Villager")
 
 
 # The game starts here.
@@ -40,7 +41,5 @@ label start:
         y "..."
 
     "You've forgotten how incompetent you are with women and think you should shut up now and accept your fate as being some sort of sacrificial lamb for this village."
-
-    # This ends the game.
 
     return
