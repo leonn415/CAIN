@@ -42,6 +42,4 @@ label start:
 
     "You've forgotten how incompetent you are with women and think you should shut up now and accept your fate as being some sort of sacrificial lamb for this village."
 
-    # This ends the game.
-
     return
