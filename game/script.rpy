@@ -19,7 +19,7 @@ init python:
     
     # Ellipsis tag but with 4 periods instead of 3 periods and a space
     def ellipsis_tag_4_periods(tag, argument):
-        return [(renpy.TEXT_TAG, "cps=*.0625"), (renpy.TEXT_TEXT, "...."), (renpy.TEXT_TAG, "/cps")]
+        return [(renpy.TEXT_TAG, "cps=*.0625"), (renpy.TEXT_TEXT, "...."), (renpy.TEXT_TAG, "/cps"), (renpy.TEXT_TEXT, " ")]
     
     config.self_closing_custom_text_tags["pause"] = pause_tag
     config.self_closing_custom_text_tags["ellipsis"] = ellipsis_tag
@@ -34,7 +34,7 @@ label normal_1:
 
     "As the sun creeps its way down the horizon,{pause}an orange hue bleeds into the forest.{pause}The trees and grasses stain in the light,{pause}appearing as if painted in odd hues.{pause}The shades of color surround you,{pause}and they confound you,{pause}much like the villagers escorting you."
     
-    "These strange people have been corralling you,{pause}much like cattle{ellipsis_end} Not a word has been said of their intentions,{pause}and all the while they only circle,{pause}the weight of their stares behind you."
+    "These strange people have been corralling you,{pause}much like cattle{ellipsis_end}Not a word has been said of their intentions,{pause}and all the while they only circle,{pause}the weight of their stares behind you."
     
     "You are,{pause}at length,{pause}brought along a weathered bridge and toward a barren hamlet.{pause}It is as if the threshold of the bridge protected all behind it from terrible blight.{pause}Ahead,{pause}shriveled,{pause}gnarled and dead trees dot between the hovels."
 
