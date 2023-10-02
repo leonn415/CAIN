@@ -25,13 +25,16 @@ init python:
     config.self_closing_custom_text_tags["ellipsis"] = ellipsis_tag
     config.self_closing_custom_text_tags["ellipsis_end"] = ellipsis_tag_4_periods
 
+label start:
+    jump normal_1
+
 label normal_1:
 
     scene bg hamlet evening
 
     "As the sun creeps its way down the horizon,{pause}an orange hue bleeds into the forest.{pause}The trees and grasses stain in the light,{pause}appearing as if painted in odd hues.{pause}The shades of color surround you,{pause}and they confound you,{pause}much like the villagers escorting you."
     
-    "These strange people have been corralling you,{pause}much like cattle{ellipsis_end}Not a word has been said of their intentions,{pause}and all the while they only circle,{pause}the weight of their stares behind you."
+    "These strange people have been corralling you,{pause}much like cattle{ellipsis_end} Not a word has been said of their intentions,{pause}and all the while they only circle,{pause}the weight of their stares behind you."
     
     "You are,{pause}at length,{pause}brought along a weathered bridge and toward a barren hamlet.{pause}It is as if the threshold of the bridge protected all behind it from terrible blight.{pause}Ahead,{pause}shriveled,{pause}gnarled and dead trees dot between the hovels."
 
