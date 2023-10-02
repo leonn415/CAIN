@@ -9,37 +9,17 @@ define y = Character("Young Woman")
 define v = Character("Villager")
 
 
-# The game starts here.
 
-label start:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+label normal_1:
 
-    scene bg room
+    scene bg hamlet evening
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+    "As the sun creeps its way down the horizon, an orange hue bleeds into the forest. The trees and grasses stain in the light, appearing as if painted in odd hues. The shades of color surround you, and they confound you, much like the villagers escorting you."
+    
+    "These strange people have been corralling you, much like cattle… Not a word has been said of their intentions, and all the while they only circle, the weight of their stares behind you."
+    
+    "You are, at length, brought along a weathered bridge and toward a barren hamlet. It is as if the threshold of the bridge protected all behind it from terrible blight. Ahead, shriveled, gnarled and dead trees dot between the hovels."
 
-    show girl neutral
+    "Yellow weeds graze against your boots as you are led down a path. The silence of their march was sparsely interrupted by the wailing of children and the pallid squawking of birds."
 
-    # These display lines of dialogue.
-
-    "The Young Woman struggles to place the Soldier's supper on the table"
-
-    menu:
-        "Are you single?":
-
-            jump choice1
-
-        "...":
-
-            jump choice1
-    label choice1:
-        y "..."
-
-    "You've forgotten how incompetent you are with women and think you should shut up now and accept your fate as being some sort of sacrificial lamb for this village."
-
-    return
