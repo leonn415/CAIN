@@ -8,13 +8,17 @@ define i = Character(what_italic = True)
 define y = Character("Young Woman")
 define v = Character("Villager")
 
-
 init python:
     # Define a custom text tag ("pause") that slows down the text speed by 90%
     def pause_tag(tag, argument):
         return [(renpy.TEXT_TAG, "cps=*.1"), (renpy.TEXT_TEXT, " "), (renpy.TEXT_TAG, "/cps")]
+
+    # Define a custom text tag ("ellipsis") that puts an ellipsis at a reduced speed
+    def ellipsis_tag(tag, argument):
+        return [(renpy.TEXT_TAG, "cps=*.0625"), (renpy.TEXT_TEXT, "... "), (renpy.TEXT_TAG, "/cps")]
     
     config.self_closing_custom_text_tags["pause"] = pause_tag
+    config.self_closing_custom_text_tags["ellipsis"] = ellipsis_tag
 
 label normal_1:
 
