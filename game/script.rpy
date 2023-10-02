@@ -17,18 +17,23 @@ init python:
     def ellipsis_tag(tag, argument):
         return [(renpy.TEXT_TAG, "cps=*.0625"), (renpy.TEXT_TEXT, "... "), (renpy.TEXT_TAG, "/cps")]
     
+    # Ellipsis tag but with 4 periods instead of 3 periods and a space
+    def ellipsis_tag_4_periods(tag, argument):
+        return [(renpy.TEXT_TAG, "cps=*.0625"), (renpy.TEXT_TEXT, "...."), (renpy.TEXT_TAG, "/cps")]
+    
     config.self_closing_custom_text_tags["pause"] = pause_tag
     config.self_closing_custom_text_tags["ellipsis"] = ellipsis_tag
+    config.self_closing_custom_text_tags["ellipsis_end"] = ellipsis_tag_4_periods
 
 label normal_1:
 
     scene bg hamlet evening
 
-    "As the sun creeps its way down the horizon, an orange hue bleeds into the forest. The trees and grasses stain in the light, appearing as if painted in odd hues. The shades of color surround you, and they confound you, much like the villagers escorting you."
+    "As the sun creeps its way down the horizon,{pause}an orange hue bleeds into the forest.{pause}The trees and grasses stain in the light,{pause}appearing as if painted in odd hues.{pause}The shades of color surround you,{pause}and they confound you,{pause}much like the villagers escorting you."
     
-    "These strange people have been corralling you, much like cattle… Not a word has been said of their intentions, and all the while they only circle, the weight of their stares behind you."
+    "These strange people have been corralling you,{pause}much like cattle{ellipsis_end}Not a word has been said of their intentions,{pause}and all the while they only circle,{pause}the weight of their stares behind you."
     
-    "You are, at length, brought along a weathered bridge and toward a barren hamlet. It is as if the threshold of the bridge protected all behind it from terrible blight. Ahead, shriveled, gnarled and dead trees dot between the hovels."
+    "You are,{pause}at length,{pause}brought along a weathered bridge and toward a barren hamlet.{pause}It is as if the threshold of the bridge protected all behind it from terrible blight.{pause}Ahead,{pause}shriveled,{pause}gnarled and dead trees dot between the hovels."
 
-    "Yellow weeds graze against your boots as you are led down a path. The silence of their march was sparsely interrupted by the wailing of children and the pallid squawking of birds."
+    "Yellow weeds graze against your boots as you are led down a path.{pause}The silence of their march was sparsely interrupted by the wailing of children and the pallid squawking of birds."
 
