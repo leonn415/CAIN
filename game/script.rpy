@@ -54,6 +54,34 @@ label normal_1:
 
     "Yellow weeds graze against your boots as you are led down a path.{pause}The silence of their march was sparsely interrupted by the wailing of children and the pallid squawking of birds."
 
+    jump normal_4
+
+label normal_4:
+
+    scene bg cabin day
+
+    "You drag your body to the table and pick up the bowl in front of you.{pause}Pieces of meat rock back and forth in the thin liquid."
+
+    "You stir around with a spoon.{pause}Hesitantly,{pause}you lift a piece of meat to your mouth."
+
+    "The meat has an unfamiliar texture.{pause}You can’t quite put a finger on it."
+
+    "The cold water ignites your dry throat,{pause}causing it to close in on itself painfully."
+
+    "You make your way back to the bed and slowly drift into sleep."
+
+    "When you wake up,{pause}another bowl of soup is already on the table.{pause}Next to it is some water and a washcloth."
+
+    "For the next few days,{pause}you go through more or less the same routine."
+
+    "You wake up to eat and wash up,{pause}then check your leg and try to rehabilitate."
+
+    "The villagers seem to have switched out your spear with a stick while you were asleep,{pause}and you use it to walk around the cabin.{pause}Whenever you try to go outside,{pause}a group of elderly villagers will sprint to block your path."
+
+    "Every day,{pause}elderly villagers come into the cabin,{pause}sometimes with small children.{pause}They don’t interact with you besides watching you like some exotic animal."
+
+    "You soon give up asking questions from them."
+
     jump normal_7
 
 label normal_7:
@@ -62,7 +90,7 @@ label normal_7:
 
     "You open your eyes in cold sweat."
 
-    "You look around the cabin and find yourself alone.{pause}He lies back down on the pillow with a sigh."
+    "You look around the cabin and find yourself alone.{pause}You lie back down on the pillow with a sigh."
 
     "You watch the cabin door in your peripheral and drift off again."
 
