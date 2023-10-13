@@ -62,7 +62,7 @@ label normal_2:
 
     "You are led to a cabin near the center of the hamlet.{pause}The door is opened with a creak and you are herded in."
 
-    "The cabin is small but surprisingly well–equipped.{pause}There’s a straw bed,{pause} a table,{pause}and a few chairs.{pause}More impressively,{pause}there seems to be an indoor pit latrine behind some wooden boards."
+    "The cabin is small but surprisingly well–equipped.{pause}There’s a straw bed,{pause}a table,{pause}and a few chairs.{pause}More impressively,{pause}there seems to be an indoor pit latrine behind some wooden boards."
 
     "You drag your body to the bed and sit down slowly.{pause}The sharp pain resurges now that you are able to relax.{pause}You really need to check your leg."
 
@@ -258,7 +258,7 @@ label normal_9
 
     "The hamlet fades into the distance as you stagger deep into the forest,{pause}not once looking back."
 
-    "Pain courses through your leg as you stumble through the thick haze. {pause}The branches claw at your skin,{pause}the air weighs heavily in your lungs,{pause}and your body burns with each step."
+    "Pain courses through your leg as you stumble through the thick haze.{pause}The branches claw at your skin,{pause}the air weighs heavily in your lungs,{pause}and your body burns with each step."
 
     "But only one thought is pounding in your head: {w}run."
 
@@ -274,7 +274,7 @@ label normal_9
 
     "Lying still as stone,{pause}you didn’t dare to think of making a single noise,{pause}for a mere breath may be the difference between life and death."
 
-    "Soon the voices start to fade as footsteps grow faint into the murky morning. {pause}You hoist yourself up with a grunt only to begin running once more."
+    "Soon the voices start to fade as footsteps grow faint into the murky morning.{pause}You hoist yourself up with a grunt only to begin running once more."
 
     scene bg forest battlefield foggy
 
@@ -285,20 +285,20 @@ label normal_9
     "It’s the young woman."
 
     menu:
-	    "Pick up a rock":
-		    $ pass
+        "Pick up a rock":
+            $ pass
     menu:
-	    "Move closer":
-		    $ pass
+        "Move closer":
+            $ pass
     menu:
-	    "Move closer":
-		    $ pass
+        "Move closer":
+        $ pass
     menu:
-	    "Move closer":
-		    $ pass
+        "Move closer":
+        $ pass
     menu:
-	    "Crack her skull"
-		    $ pass
+        "Crack her skull"
+            $ pass
 
     "She lets out a tiny yelp before her face is forced into the water below."
 
@@ -307,13 +307,13 @@ label normal_9
     "You flip her body over with a grunt,{pause}only to be met with your own lifeless visage."
 
     "{ellipsis}"
-    #programmer could you put in a heartbeat sound effect & possibly make the screen pulse (if that’s a thing) answer: yes,{pause} that’s possible
+    #programmer could you put in a heartbeat sound effect & possibly make the screen pulse (if that’s a thing) answer: yes,{pause}that’s possible
 
-    "Your face turns hot as your vision starts to become bleary. {pause}With trembling hands,{pause}you stagger from the ghastly sight of the body."
+    "Your face turns hot as your vision starts to become bleary.{pause}With trembling hands,{pause}you stagger from the ghastly sight of the body."
 
     "Your stomach drops,{pause}you hesitantly bring your hands up to your face,{pause}murmuring to yourself in denial as you feel the skin that was meant to be yours"
 
-    "The only thing you can hear is your heartbeat as your breathing becomes more and more erratic.{pause} Your legs tremble as you bring yourself up off the ground and take a step back,{pause}only to be met with a giant plop as your body sinks into the depths of the river."
+    "The only thing you can hear is your heartbeat as your breathing becomes more and more erratic.{pause}Your legs tremble as you bring yourself up off the ground and take a step back,{pause}only to be met with a giant plop as your body sinks into the depths of the river."
 
     jump normal_ending
 
