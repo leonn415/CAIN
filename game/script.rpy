@@ -108,7 +108,7 @@ label normal_3:
 
     "She continues walking towards the door."
 
-    s "{size=-10}—can you tell me about this place?{pause}Anything{ellipsis}.{pause}please{ellipsis}." #programmer please make this text smaller (use a variable to store the smaller text size)
+    s "{size=-10}—can you tell me about this place?{pause}Anything{ellipsis}please{ellipsis}" #programmer please make this text smaller (use a variable to store the smaller text size)
 
     "She turns back towards you.{pause}You think you might have changed her mind."
 
@@ -249,6 +249,71 @@ label normal_8_placeholder:
     "You are hanging from the inner edge of the pit latrine.{pause}As the hurried footsteps grow distant,{pause}you push the toilet seat away and pull yourself up."
 
     "You listen with your ear against the walls before slipping out the door."
+    
+    jump normal_9
+
+label normal_9
+
+    scene bg forest foggy
+
+    "The hamlet fades into the distance as you stagger deep into the forest,{pause}not once looking back."
+
+    "Pain courses through your leg as you stumble through the thick haze. {pause}The branches claw at your skin,{pause}the air weighs heavily in your lungs,{pause}and your body burns with each step."
+
+    "But only one thought is pounding in your head: {w}run."
+
+    "{ellipsis}"
+    #programmer: is it possible to just have no dialogue here and add in a twig snapping/leaves rustling sound effect? answer: yes
+
+    "You whip your head around,{pause}listening for something,{pause}anything."
+
+    "Suddenly,{pause}the forest filled with the sound of twigs snapping and shouting from each and every direction."
+    #If we are implementing a mini-game,{pause}here’s where it’ll start
+
+    "You let your body drop straight to the ground,{pause}curling up beneath the shadows of a nearby tree."
+
+    "Lying still as stone,{pause}you didn’t dare to think of making a single noise,{pause}for a mere breath may be the difference between life and death."
+
+    "Soon the voices start to fade as footsteps grow faint into the murky morning. {pause}You hoist yourself up with a grunt only to begin running once more."
+
+    scene bg forest battlefield foggy
+
+    "After what felt like an eternity of running,{pause}your pace steadies as the blurred outline of the battlefield emerges from the fog."
+
+    "As you inch closer and closer towards the clearing,{pause}the hazy curtain of white seems to dissipate as a familiar figure appears at the edge of the battlefield."
+
+    "It’s the young woman."
+
+    menu:
+	    "Pick up a rock":
+		    $ pass
+    menu:
+	    "Move closer":
+		    $ pass
+    menu:
+	    "Move closer":
+		    $ pass
+    menu:
+	    "Move closer":
+		    $ pass
+    menu:
+	    "Crack her skull"
+		    $ pass
+
+    "She lets out a tiny yelp before her face is forced into the water below."
+
+    "You kneel down beside the young woman,{pause}holding her face down into the water until her body goes limp."
+
+    "You flip her body over with a grunt,{pause}only to be met with your own lifeless visage."
+
+    "{ellipsis}"
+    #programmer could you put in a heartbeat sound effect & possibly make the screen pulse (if that’s a thing) answer: yes,{pause} that’s possible
+
+    "Your face turns hot as your vision starts to become bleary. {pause}With trembling hands,{pause}you stagger from the ghastly sight of the body."
+
+    "Your stomach drops,{pause}you hesitantly bring your hands up to your face,{pause}murmuring to yourself in denial as you feel the skin that was meant to be yours"
+
+    "The only thing you can hear is your heartbeat as your breathing becomes more and more erratic.{pause} Your legs tremble as you bring yourself up off the ground and take a step back,{pause}only to be met with a giant plop as your body sinks into the depths of the river."
 
     jump normal_ending
 
