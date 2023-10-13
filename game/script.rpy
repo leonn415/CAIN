@@ -15,18 +15,36 @@ init python:
 
     # Define a custom text tag ("ellipsis") that puts an ellipsis at a reduced speed
     def ellipsis_tag(tag, argument):
-        return [(renpy.TEXT_TAG, "cps=*1.25"), (renpy.TEXT_TEXT, ". . . "), (renpy.TEXT_TAG, "/cps")]
+        return [(renpy.TEXT_TAG, "cps=*0.125"), (renpy.TEXT_TEXT, ". . . "), (renpy.TEXT_TAG, "/cps")]
     
     config.self_closing_custom_text_tags["pause"] = pause_tag
     config.self_closing_custom_text_tags["ellipsis"] = ellipsis_tag
-    config.self_closing_custom_text_tags["ellipsis_end"] = ellipsis_tag_4_periods
 
 label start:
+    jump intro
+
+label intro:
+    scene intro 1
+    pause
+    scene intro 2 with dissolve
+    pause
+    scene intro 3 with dissolve
+    pause
+    scene intro 4 with dissolve
+    pause
+    scene intro 5 with dissolve
+    pause
+    scene intro 6 with dissolve
+    pause
+    scene intro 7 with dissolve
+    pause
+    scene intro 8 with dissolve
+    pause
     jump normal_1
 
 label normal_1:
 
-    scene bg hamlet evening
+    scene bg hamlet evening with dissolve
 
     "As the sun creeps its way down the horizon,{pause}an orange hue bleeds into the forest.{pause}The trees and grasses stain in the light,{pause}appearing as if painted in odd hues.{pause}The shades of color surround you,{pause}and they confound you,{pause}much like the villagers escorting you."
     
