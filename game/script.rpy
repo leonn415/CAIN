@@ -208,7 +208,7 @@ label normal_7:
 
     "You open your eyes in cold sweat."
 
-    "You look around the cabin and find yourself alone.{pause}You lies back down on the pillow with a sigh."
+    "You look around the cabin and find yourself alone.{pause}You lie back down on the pillow with a sigh."
 
     "You watch the cabin door in your peripheral and drift off again."
 
