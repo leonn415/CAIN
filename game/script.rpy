@@ -93,6 +93,28 @@ label normal_7:
 
     scene black with dissolve
 
+    jump normal_8_placeholder
+
+label normal_8_placeholder:
+
+    scene bg cabin foggy
+
+    "Morning fog seeps into the cabin from below the door."
+
+    "The door opens,{pause}in walks the young woman."
+
+    "She lets out a panicked shriek heard loud enough for the entire hamlet.{pause}Another villager comes running."
+
+    v "What’s wrong?!"
+
+    y "He’s gone!"
+
+    v "Quick!{pause}Everyone form groups of three and search!"
+
+    "You are hanging from the inner edge of the pit latrine.{pause}As the hurried footsteps grow distant,{pause}you push the toilet seat away and pull yourself up."
+
+    "You listen with your ear against the walls before slipping out the door."
+
     jump normal_ending
 
 label normal_ending:
