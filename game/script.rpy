@@ -198,9 +198,23 @@ label normal_5:
 
     scene black with Dissolve(0.9)
 
-    #jump normal_6 DOESN'T EXIST RN
+    jump normal_6
+    
+label normal_6:
 
-    # would it be good to end the scene with a slow fade to black?? yeah —Leon, implemented —Roderic
+    scene black
+
+    #scene bg void(?)
+
+    "You open your eyes only to see an unending void,{pause}darkness stretching out in every direction."
+
+    "You stumble to your feet,{pause}trying to make sense of the dark expanse before you when your eyes catch an eagle-like bird illuminated by a single beam of light."
+
+    "Walking closer,{pause}you see the bird is picking at something."
+
+    "Upon closer inspection,{pause}the bird is feeding on a dead mouse,{pause}only picking at the face of it."
+
+    jump normal_7
 
 label normal_7:
 
@@ -213,6 +227,28 @@ label normal_7:
     "You watch the cabin door in your peripheral and drift off again."
 
     scene black with dissolve
+
+    jump normal_8_placeholder
+
+label normal_8_placeholder:
+
+    scene bg cabin foggy
+
+    "Morning fog seeps into the cabin from below the door."
+
+    "The door opens,{pause}in walks the young woman."
+
+    "She lets out a panicked shriek heard loud enough for the entire hamlet.{pause}Another villager comes running."
+
+    v "What’s wrong?!"
+
+    y "He’s gone!"
+
+    v "Quick!{pause}Everyone form groups of three and search!"
+
+    "You are hanging from the inner edge of the pit latrine.{pause}As the hurried footsteps grow distant,{pause}you push the toilet seat away and pull yourself up."
+
+    "You listen with your ear against the walls before slipping out the door."
 
     jump normal_ending
 
