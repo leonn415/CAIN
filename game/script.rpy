@@ -82,7 +82,41 @@ label normal_2:
 
     "The young woman sits in the puddle of water,{pause}her hair and dress soaked.{pause}You look toward the other villagers,{pause}hoping they would lend a helping hand,{pause}only to be stunned by the cold stares thrown her way."
 
-    #jump normal_3
+    jump normal_3
+
+label normal_3:
+
+    scene bg cabin night
+ 
+    "Day hastefully becomes night."
+
+    "The cabin is pitch black.{pause}The room is now unrecognizable from the day."
+
+    "The abnormal silence of the forest is eerie.{pause}The only thing you can manage to hear is the blowing of the wind."
+
+    "You then hear a door creak as it slowly opens with a contrasting bright light coming from a candle,{pause} it’s the woman from before."
+
+    "The woman comes up and lays a tray on the table.{pause}On the tray is a bowl of soup,{pause}a cup of cold water,{pause}and a lit candle."
+
+    s "Thank you…"
+
+    "She nods and turns to leave."
+
+    "You attempt to sit up."
+
+    s "Wait!{pause}Can you—"
+
+    "She continues walking towards the door."
+
+    s "{size=-10}—can you tell me about this place?{pause}Anything….{pause}please…." #programmer please make this text smaller (use a variable to store the smaller text size)
+
+    "She turns back towards you. You think you might have changed her mind."
+
+    hide girl
+
+    "But you hadn’t.{w}Without a single word, she simply bows before leaving you alone in the cabin, again."
+
+    "You are left alone, listening to the late night ambience."
 
 label normal_5:
 
