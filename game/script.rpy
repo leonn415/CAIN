@@ -94,11 +94,11 @@ label normal_3:
 
     "The abnormal silence of the forest is eerie.{pause}The only thing you can manage to hear is the blowing of the wind."
 
-    "You then hear a door creak as it slowly opens with a contrasting bright light coming from a candle,{pause} it’s the woman from before."
+    "You then hear a door creak as it slowly opens with a contrasting bright light coming from a candle,{pause}it’s the woman from before."
 
     "The woman comes up and lays a tray on the table.{pause}On the tray is a bowl of soup,{pause}a cup of cold water,{pause}and a lit candle."
 
-    s "Thank you…{pause}"
+    s "Thank you{ellipsis}"
 
     "She nods and turns to leave."
 
@@ -108,13 +108,13 @@ label normal_3:
 
     "She continues walking towards the door."
 
-    s "{size=-10}—can you tell me about this place?{pause}Anything…{pause}.{pause}please…{pause}." #programmer please make this text smaller (use a variable to store the smaller text size)
+    s "{size=-10}—can you tell me about this place?{pause}Anything{ellipsis}.{pause}please{ellipsis}." #programmer please make this text smaller (use a variable to store the smaller text size)
 
     "She turns back towards you.{pause}You think you might have changed her mind."
 
     hide girl
 
-    "But you hadn’t.{w}Without a single word,{pause}she simply bows before leaving you alone in the cabin,{pause}again."
+    "But you hadn’t.{w} Without a single word,{pause}she simply bows before leaving you alone in the cabin,{pause}again."
 
     "You are left alone,{pause}listening to the late night ambience."
 
@@ -178,7 +178,7 @@ label normal_5:
 
     "You notice that the woman seems antsy,{pause}so you give her a reassuring smile."
 
-    s "Except…{pause}you,{pause}of course."
+    s "Except{ellipsis}you,{pause}of course."
 
     "You pause,{pause}leaning forward with a warm expression."
 
