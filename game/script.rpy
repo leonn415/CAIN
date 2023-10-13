@@ -54,3 +54,16 @@ label normal_1:
 
     "Yellow weeds graze against your boots as you are led down a path.{pause}The silence of their march was sparsely interrupted by the wailing of children and the pallid squawking of birds."
 
+    jump normal_7
+
+label normal_7:
+
+    scene bg cabin night
+
+    "You open your eyes in cold sweat."
+
+    "You look around the cabin and find yourself alone.{pause}He lies back down on the pillow with a sigh."
+
+    "You watch the cabin door in your peripheral and drift off again."
+
+    scene black with dissolve
