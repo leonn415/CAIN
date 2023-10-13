@@ -54,7 +54,33 @@ label normal_1:
 
     "Yellow weeds graze against your boots as you are led down a path.{pause}The silence of their march was sparsely interrupted by the wailing of children and the pallid squawking of birds."
 
-    jump normal_7
+label normal_2:
+
+    scene bg cabin evening
+
+    "You are led to a cabin near the center of the hamlet. The door is opened with a creak and you are herded in."
+
+    "The cabin is small but surprisingly well–equipped. There’s a straw bed, a table, and a few chairs. More impressively, there seems to be an indoor pit latrine behind some wooden boards."
+
+    "You drag your body to the bed and sit down slowly. The sharp pain resurges now that you are able to relax. You really need to check your leg."
+
+    "Leaning the spear against the bed, you clench your teeth as you raise your legs onto the bed."
+
+    "A young woman enters the cabin."
+
+    show girl neutral
+
+    "Most of her face is covered in flesh folds and lesions, but you can tell from the rest of her body that she is around your age. She is holding a bucket of water and some cloth."
+
+    "She approaches the foot of the bed, struggling to handle the bucket with her stumps for hands."
+
+    "You reach out for the bucket, only for her to flinch away from you, the bucket toppling over."
+
+    s "Ah— "
+
+    "The young woman sits in the puddle of water, her hair and dress soaked. You look toward the other villagers, hoping they would lend a helping hand, only to be stunned by the cold stares thrown her way."
+
+    #jump normal_3
 
 label normal_7:
 
