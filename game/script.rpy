@@ -67,3 +67,22 @@ label normal_7:
     "You watch the cabin door in your peripheral and drift off again."
 
     scene black with dissolve
+
+    jump normal_ending
+
+label normal_ending:
+
+    "It’s a warm day with a clear sky."
+
+    "A village is bustling with life.{pause}Kids take off their socks and shoes to play in the clear,{pause}glistening river."
+
+    "From somewhere upstream,{pause}steadily,{pause}past green trees,{pause}young grass,{pause}tiny flowers,{pause}and lively animals,{pause}all under the blue sky,{pause}is the body of a soldier floating idly down the river."
+
+    "The body is fully intact and doesn’t leave a bloody trail in the water."
+
+    "The face on the body is that of a deformed young woman."
+
+    show qrcode with dissolve:
+        xalign 0.5
+
+    "Thank you for playing CAIN!{pause}Please fill out the feedback form to tell us what you thought of CAIN!"
