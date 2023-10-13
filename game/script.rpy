@@ -63,6 +63,22 @@ label normal_4:
 
     "You soon give up asking questions from them."
 
+    jump normal_6
+
+label normal_6:
+
+    scene black
+
+    #scene bg void(?)
+
+    "You open your eyes only to see an unending void,{pause}darkness stretching out in every direction."
+
+    "You stumble to your feet,{pause}trying to make sense of the dark expanse before you when your eyes catch an eagle-like bird illuminated by a single beam of light."
+
+    "Walking closer,{pause}you see the bird is picking at something."
+
+    "Upon closer inspection,{pause}the bird is feeding on a dead mouse,{pause}only picking at the face of it."
+
     jump normal_7
 
 label normal_7:
