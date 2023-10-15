@@ -15,8 +15,8 @@ init python:
 
     # Define a custom text tag ("ellipsis") that puts an ellipsis at a reduced speed
     def ellipsis_tag(tag, argument):
-        return [(renpy.TEXT_TAG, "cps=*0.125"), (renpy.TEXT_TEXT, ". . . "), (renpy.TEXT_TAG, "/cps")]
-    
+        return [(renpy.TEXT_TAG, "cps=*0.3"), (renpy.TEXT_TEXT, ". . . "), (renpy.TEXT_TAG, "/cps")]
+
     config.self_closing_custom_text_tags["pause"] = pause_tag
     config.self_closing_custom_text_tags["ellipsis"] = ellipsis_tag
 
@@ -26,20 +26,28 @@ label start:
 label intro:
     scene intro 1
     pause
+    scene black with dissolve
     scene intro 2 with dissolve
     pause
+    scene black with dissolve
     scene intro 3 with dissolve
     pause
+    scene black with dissolve
     scene intro 4 with dissolve
     pause
+    scene black with dissolve
     scene intro 5 with dissolve
     pause
+    scene black with dissolve
     scene intro 6 with dissolve
     pause
+    scene black with dissolve
     scene intro 7 with dissolve
     pause
+    scene black with dissolve
     scene intro 8 with dissolve
     pause
+    scene black with dissolve
     jump normal_1
 
 label normal_1:
@@ -47,9 +55,9 @@ label normal_1:
     scene bg hamlet evening with dissolve
 
     "As the sun creeps its way down the horizon,{pause}an orange hue bleeds into the forest.{pause}The trees and grasses stain in the light,{pause}appearing as if painted in odd hues.{pause}The shades of color surround you,{pause}and they confound you,{pause}much like the villagers escorting you."
-    
+
     "These strange people have been corralling you,{pause}much like cattle{ellipsis}Not a word has been said of their intentions,{pause}and all the while they only circle,{pause}the weight of their stares behind you."
-    
+
     "You are,{pause}at length,{pause}brought along a weathered bridge and toward a barren hamlet.{pause}It is as if the threshold of the bridge protected all behind it from terrible blight.{pause}Ahead,{pause}shriveled,{pause}gnarled and dead trees dot between the hovels."
 
     "Yellow weeds graze against your boots as you are led down a path.{pause}The silence of their march was sparsely interrupted by the wailing of children and the pallid squawking of birds."
@@ -86,8 +94,8 @@ label normal_2:
 
 label normal_3:
 
-    scene bg cabin night
- 
+    scene black
+
     "Day hastefully becomes night."
 
     "The cabin is pitch black.{pause}The room is now unrecognizable from the day."
@@ -95,6 +103,10 @@ label normal_3:
     "The abnormal silence of the forest is eerie.{pause}The only thing you can manage to hear is the blowing of the wind."
 
     "You then hear a door creak as it slowly opens with a contrasting bright light coming from a candle,{pause}it’s the woman from before."
+
+    scene bg cabin night
+
+    show girl neutral
 
     "The woman comes up and lays a tray on the table.{pause}On the tray is a bowl of soup,{pause}a cup of cold water,{pause}and a lit candle."
 
@@ -112,7 +124,7 @@ label normal_3:
 
     "She turns back towards you.{pause}You think you might have changed her mind."
 
-    hide girl
+    hide girl neutral
 
     "But you hadn’t.{w} Without a single word,{pause}she simply bows before leaving you alone in the cabin,{pause}again."
 
@@ -122,7 +134,7 @@ label normal_3:
 
 label normal_4:
 
-    scene bg cabin day
+    scene bg cabin night
 
     "You drag your body to the table and pick up the bowl in front of you.{pause}Pieces of meat rock back and forth in the thin liquid."
 
@@ -133,6 +145,10 @@ label normal_4:
     "The cold water ignites your dry throat,{pause}causing it to close in on itself painfully."
 
     "You make your way back to the bed and slowly drift into sleep."
+
+    scene black with Dissolve(1)
+
+    scene bg cabin day with Dissolve(1)
 
     "When you wake up,{pause}another bowl of soup is already on the table.{pause}Next to it is some water and a washcloth."
 
@@ -170,7 +186,7 @@ label normal_5:
 
     s "No,{pause}wait!{pause}It’s okay,{pause}I won’t touch."
 
-    show girl neutral 
+    show girl neutral
 
     "You pause,{pause}taking a moment to truly look at the young woman for the first time.{pause}Your eyes search for hers under the folds of deformed flesh that cling to her face."
 
@@ -186,7 +202,7 @@ label normal_5:
 
     "The young woman’s expression seems to soften for just a moment.{pause}She reaches her wrist towards you,{pause}stretching out towards your face."
 
-    "At the last moment,{pause}however,{pause}she hesitates as her eyes flicker with a hint of emotion.{pause}Was there a chance that she could pit you?"
+    "At the last moment,{pause}however,{pause}she hesitates as her eyes flicker with a hint of emotion.{pause}Was there a chance that she could pity you?"
 
     "For what seems like an eternity,{pause}the room fills with a heavy silence.{pause}You stare at her,{pause}eyes wide as her wrist is just a touch away from your face."
 
@@ -199,7 +215,7 @@ label normal_5:
     scene black with Dissolve(0.9)
 
     jump normal_6
-    
+
 label normal_6:
 
     scene black
@@ -249,10 +265,10 @@ label normal_8_placeholder:
     "You are hanging from the inner edge of the pit latrine.{pause}As the hurried footsteps grow distant,{pause}you push the toilet seat away and pull yourself up."
 
     "You listen with your ear against the walls before slipping out the door."
-    
+
     jump normal_9
 
-label normal_9
+label normal_9:
 
     scene bg forest foggy
 
@@ -286,21 +302,21 @@ label normal_9
 
     menu:
         "Pick up a rock":
-            $ pass
+            pass
     menu:
         "Move closer":
-            $ pass
+            pass
     menu:
         "Move closer":
-        $ pass
+            pass
     menu:
         "Move closer":
-        $ pass
+            pass
     menu:
-        "Crack her skull"
-            $ pass
+        "Crack her skull":
+            pass
 
-    "She lets out a tiny yelp before her face is forced into the water below."
+    "She lets out a tiny yelp before she falls face-first into the river."
 
     "You kneel down beside the young woman,{pause}holding her face down into the water until her body goes limp."
 
@@ -318,6 +334,10 @@ label normal_9
     jump normal_ending
 
 label normal_ending:
+
+    scene black with Dissolve(3)
+
+    scene bg forest foggy with Dissolve(3)
 
     "It’s a warm day with a clear sky."
 
