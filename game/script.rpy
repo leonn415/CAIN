@@ -3,6 +3,8 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
+define config.has_autosave = False
+define config.has_quicksave = False
 define s = Character("Soldier")
 define i = Character(what_italic = True)
 define y = Character("Young Woman")
@@ -21,11 +23,10 @@ init python:
     config.self_closing_custom_text_tags["ellipsis"] = ellipsis_tag
 
 label start:
-    if persistent.tl > 1:
-        jump normal_1
-    else:
+    if persistent.tl == 1:
         jump intro
-
+    else:
+        jump normal_1
 label intro:
     scene intro 1
     pause
@@ -54,13 +55,15 @@ label intro:
     jump normal_1
 
 label normal_1:
-    $ day = 0
+    $ day = 1
     $ hunger = 0
     $ defiance = 0
     $ rehab = 0
     scene bg hamlet evening with dissolve
 
-    "As the sun creeps its way down the horizon,{pause}an orange hue bleeds into the forest.{pause}The trees and grasses stain in the light,{pause}appearing as if painted in odd hues.{pause}The shades of color surround you,{pause}and they confound you,{pause}much like the villagers escorting you."
+    "As the sun creeps its way down the horizon, an orange tinge bleeds into the forest."
+
+    "The trees and grasses, all the various foliage about, stain in the light, appearing as if painted in odd hues. The shades of color surround, and they confound, much like the villagers escorting you."
 
     "These strange people have been corralling you,{pause}much like cattle{ellipsis}Not a word has been said of their intentions,{pause}and all the while they only circle,{pause}the weight of their stares behind you."
 
@@ -72,7 +75,7 @@ label normal_1:
 
 label normal_2:
 
-    scene bg cabin evening
+    scene bg cabin day
 
     "You are led to a cabin near the center of the hamlet.{pause}The door is opened with a creak and you are herded in."
 
@@ -80,7 +83,7 @@ label normal_2:
 
     "You drag your body to the bed and sit down slowly.{pause}The sharp pain resurges now that you are able to relax.{pause}You really need to check your leg."
 
-    "Leaning the spear against the bed,{pause}you clench your teeth as you raise your legs onto the bed."
+    "Leaning the spear you've been using as a crutch against the wall,{pause}you clench your teeth as you raise your legs onto the bed."
 
     "A young woman enters the cabin."
 
@@ -100,7 +103,7 @@ label normal_2:
 
 label normal_3:
 
-    scene black
+    scene bg cabin dark
 
     "Day hastefully becomes night."
 
@@ -136,21 +139,9 @@ label normal_3:
 
     "You are left alone,{pause}listening to the late night ambience."
 
-    if persistent.Stl == 1:
+    "You drag your body to the table and pick up the bowl in front of you.{pause}Pieces of meat rock back and forth in the thin liquid."
+
+    if persistent.tl == 1:
         jump normal_4
     else:
         jump days
-
-#this label represents the day cycle in the game
-label days:
-    scene bg cabin night
-    #show girl neutral
-    #call make_convo
-    $ day += 1
-    call eat
-    if day == 5:
-        jump normal_5
-    scene bg cabin day
-    "The young woman has left your breakfast on the table."
-    call eat
-    jump days

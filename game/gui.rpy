@@ -24,7 +24,7 @@ init python:
 
 ## An accent color used throughout the interface to label and highlight text.
 ## Including character name in dialogue btw - Leon
-define gui.accent_color = u'#720400'
+define gui.accent_color = u'#540300'
 
 ## The color used for a text button when it is neither selected nor hovered.
 define gui.idle_color = u'#aaaaaa'

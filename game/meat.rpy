@@ -4,10 +4,11 @@ label eat:
         "Eat it":
             $ hunger +=1
             $ defiance = 0
-            call hunger_response
+            call hunger_response from _call_hunger_response
         "Don’t eat":
             $ defiance += 1
-            call defiance_response
+            call defiance_response from _call_defiance_response
+            call dispose
     return
 
 #determines the response when you eat
@@ -69,3 +70,14 @@ label defiance_response:
         return
     elif defiance == 9:
         jump starvation_ending
+
+label dispose:
+    menu:
+        "Dispose of the soup?"
+        "Yes":
+            $ dumped = True
+            $ pile += 1
+            "You take the bowl to the pit latrine and pour the soup down the hole in the middle of the seat. The plops of the meat chunks wet and slimy."
+        "No":
+            pass
+    return

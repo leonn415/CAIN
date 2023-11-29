@@ -2,8 +2,6 @@ label normal_4:
 
     scene bg cabin night
 
-    "You drag your body to the table and pick up the bowl in front of you.{pause}Pieces of meat rock back and forth in the thin liquid."
-
     "You stir around with a spoon.{pause}Hesitantly,{pause}you lift a piece of meat to your mouth."
 
     "The meat has an unfamiliar texture.{pause}You can’t quite put a finger on it."
@@ -42,11 +40,9 @@ label normal_5:
 
     "She sets a bowl down on the edge of the table,{pause}standing a mere foot away from you."
 
-    i "Ah.{pause}She stuck around this time."
-
     s "Hey."
 
-    "The young woman visibly flinches at the sudden sound of the soldier’s voice.{pause}She shrinks back,{pause}as her eyes flicker towards the door."
+    "The young woman visibly flinches at the sudden sound of your voice.{pause}She shrinks back,{pause}as her eyes flicker towards the door."
 
     "You pull your arms back,{pause}feigning surrender in hopes of appeasing the girl."
 
@@ -68,9 +64,16 @@ label normal_5:
 
     "The young woman’s expression seems to soften for just a moment.{pause}She reaches her wrist towards you,{pause}stretching out towards your face."
 
-    "At the last moment,{pause}however,{pause}she hesitates as her eyes flicker with a hint of emotion.{pause}Was there a chance that she could pity you?"
+    "At the last moment,{pause}however,{pause}she hesitates as her eyes flicker with a hint of emotion.{pause}Was there a chance that she could sympathize with you?"
 
     "For what seems like an eternity,{pause}the room fills with a heavy silence.{pause}You stare at her,{pause}eyes wide as her wrist is just a touch away from your face."
+
+    #if persistent.tl > 1:
+        #menu:
+            #"Grab her":
+                #pass
+            #"Stay still":
+                #pass
 
     s "Won’t you take pity on me?{pause}I just want a friend."
 
@@ -102,11 +105,13 @@ label normal_7:
 
     scene bg cabin night
 
-    "You open your eyes in cold sweat."
+    "Your eyes snap open, and a dark ceiling greets your vision. You’re back in the cabin. Or rather, you never left."
 
-    "You look around the cabin and find yourself alone.{pause}You lie back down on the pillow with a sigh."
+    "The rough fabric bedding, heavy with sweat, wraps around your body like chains. You itch all over from a night spent in its cruel embrace."
 
-    "You watch the cabin door in your peripheral and drift off again."
+    "You sit up and take a look around as you throw the fabric from your raw skin. The cabin is still and serene. You hear only your raging heartbeat and heaving gasps."
+
+    "You lie back down and let the sheets cover you once more. You keep your gaze on the cabin’s entrance and drift once more into unconsciousness."
 
     scene black with dissolve
 
@@ -114,7 +119,9 @@ label normal_7:
 
 label normal_8_placeholder:
 
-    scene bg cabin foggy
+    scene bg cabin morning
+
+    show particleFog
 
     "Morning fog seeps into the cabin from below the door."
 
@@ -127,6 +134,9 @@ label normal_8_placeholder:
     y "He’s gone!"
 
     v "Quick!{pause}Everyone form groups of three and search!"
+
+    if defiance >= 6:
+        jump fall_ending
 
     "You are hanging from the inner edge of the pit latrine.{pause}As the hurried footsteps grow distant,{pause}you push the toilet seat away and pull yourself up."
 
@@ -163,7 +173,7 @@ label normal_9:
     "Soon the voices start to fade as footsteps grow faint into the murky morning.{pause}You hoist yourself up with a grunt only to begin running once more."
 
     scene bg battlefield
-    
+
     show particleFog
 
     "After what felt like an eternity of running,{pause}your pace steadies as the blurred outline of the battlefield emerges from the fog."
@@ -190,9 +200,9 @@ label normal_9:
 
     "She lets out a tiny yelp before she falls face-first into the river."
 
-    "You kneel down beside the young woman,{pause}holding her face down into the water until her body goes limp."
+    "You kneel down beside the young woman,{pause}holding her face down into the water until it stops bubbling."
 
-    "You flip her body over with a grunt,{pause}only to be met with your own lifeless visage."
+    "You flip her body over with a grunt.{pause}However, you are not met with her deformed face, but your own lifeless visage."
 
     "{ellipsis}"
     #programmer could you put in a heartbeat sound effect & possibly make the screen pulse (if that’s a thing) answer: yes,{pause}that’s possible
@@ -211,7 +221,7 @@ label normal_ending:
 
     scene black with Dissolve(3)
 
-    #scene bg forest with Dissolve(3)
+    scene bg battlefield with Dissolve(3)
 
     "It’s a warm day with a clear sky."
 
@@ -223,8 +233,7 @@ label normal_ending:
 
     "The face on the body is that of a deformed young woman."
 
+    #show qrcode with dissolve:
+        #xalign 0.5
 
-    show qrcode with dissolve:
-        xalign 0.5
-
-    "Thank you for playing CAIN!{pause}Please fill out the feedback form to tell us what you thought of CAIN!"
+    #"Thank you for playing CAIN!{pause}Please fill out the feedback form to tell us what you thought of CAIN!"
