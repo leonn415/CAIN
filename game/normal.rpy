@@ -215,7 +215,7 @@ label normal_9:
 
     "Your face turns hot as your vision starts to become bleary.{pause}With trembling hands,{pause}you stagger from the ghastly sight of the body."
 
-    "Your stomach drops,{pause}you hesitantly bring your hands up to your face,{pause}murmuring to yourself in denial as you feel the skin that was meant to be yours"
+    "Your stomach drops,{pause}you hesitantly bring your hands up to your face,{pause}murmuring to yourself in denial as you feel the skin that was meant to be yours."
 
     "The only thing you can hear is your heartbeat as your breathing becomes more and more erratic.{pause}Your legs tremble as you bring yourself up off the ground and take a step back,{pause}only to be met with a giant plop as your body sinks into the depths of the river."
 
