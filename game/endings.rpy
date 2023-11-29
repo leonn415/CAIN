@@ -17,15 +17,60 @@ label starvation_ending:
 
     "You have died."
 
+
     scene black with Dissolve(3)
+
+    "Ending (2/6)"
+
     $ persistent.tl += 1
     $ MainMenu(confirm=False)()
 
-#you die from being too weak to support yourself in the pit latrine
-label fall_ending:
+label trip_ending:
+    "With your walking stick in one hand, you run awkwardly towards the forest."
+
+    "Just when you are about to reach the edge, you trip on your own feet."
+
+    "Your throat lands perfectly onto the tip of your stick. It doesn't penetrate your neck, but the damage is done."
+
+    "You fall to the ground, spasming. You foam at the mouth as the air leaves your brain."
+
+    scene black with Dissolve(3)
+
+    "Ending (3/6)"
+
+    $ persistent.tl += 1
+    $ MainMenu(confirm=False)()
+label weak_ending:
+    "She screams as she flings your arm back, hair and skin stuck to the rock."
+
+    "She turns around, wearing your face."
+
+    "You scream and tackle her to the ground before you could process what it means."
+
+    "You wrestle, making incoherent noises like animals."
+
+    "Something strikes you from behind, and your body goes into shock."
+
+    "Then, everything goes black."
+
+
+    scene black with Dissolve(3)
+
+    "Ending (4/6)"
+
+    $ persistent.tl += 1
+    $ MainMenu(confirm=False)()
+
+label malnurished_ending:
     "It's been days since you've eaten anything. You shake uncontrollably and your good leg slides off the opposit wall. Your fingers lose their grip on the ledge, and you make one final swipe at the seat cover in vain."
+
     if pile == 8:
         jump cushioned_ending
+    else:
+        jump fall_ending
+
+#you die from being too weak to support yourself in the pit latrine
+label fall_ending:
     "You fall straight down in a ludicrous position: three limbs up and grazing the wall."
 
     "The leg that you cannot lift hits the ground first. Not at a pretty angle, no. Then, your tailbone."
@@ -35,6 +80,9 @@ label fall_ending:
     "How fortunate you are to be unconscious as your organs, and then you, die."
 
     scene black with Dissolve(3)
+
+    "Ending (5/6)"
+
     $ persistent.tl += 1
     $ MainMenu(confirm=False)()
 
@@ -63,6 +111,8 @@ label cushioned_ending:
     "Every inch of your skin and lining burns, and you can't even scream."
 
     "Fortunately for you, your brain is not a long trip from the nostrils. You will be relieved soon."
+
+    "Ending (6/6)"
 
     $ persistent.tl += 1
     $ MainMenu(confirm=False)()

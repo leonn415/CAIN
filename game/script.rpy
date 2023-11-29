@@ -9,6 +9,7 @@ define s = Character("Soldier")
 define i = Character(what_italic = True)
 define y = Character("Young Woman")
 define v = Character("Villager")
+define o = Character("Elderly Man")
 
 init python:
     # Define a custom text tag ("pause") that slows down the text speed by 90%

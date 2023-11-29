@@ -135,8 +135,8 @@ label normal_8_placeholder:
 
     v "Quick!{pause}Everyone form groups of three and search!"
 
-    if defiance >= 6:
-        jump fall_ending
+    if persistent.tl > 1 and defiance >= 6:
+        jump malnurished_ending
 
     "You are hanging from the inner edge of the pit latrine.{pause}As the hurried footsteps grow distant,{pause}you push the toilet seat away and pull yourself up."
 
@@ -151,6 +151,9 @@ label normal_9:
     #show tiledFog at Pan((0,0), (1600,0), 5, repeat=True)
 
     show particleFog
+
+    if persistent.tl > 1 and rehab <= 2:
+        jump trip_ending
 
     "The hamlet fades into the distance as you stagger deep into the forest,{pause}not once looking back."
 
@@ -198,6 +201,9 @@ label normal_9:
         "Crack her skull":
             pass
 
+    if persistent.tl > 1 and rehab <= 4:
+            jump weak_ending
+
     "She lets out a tiny yelp before she falls face-first into the river."
 
     "You kneel down beside the young woman,{pause}holding her face down into the water until it stops bubbling."
@@ -232,6 +238,8 @@ label normal_ending:
     "The body is fully intact and doesn’t leave a bloody trail in the water."
 
     "The face on the body is that of a deformed young woman."
+
+    "Normal Ending"
 
     #show qrcode with dissolve:
         #xalign 0.5

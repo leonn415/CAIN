@@ -10,8 +10,14 @@ default defiance = 0
 
 default rehab = 0
 
+default heal = 0
+
 default favor = 0
 
 default dumped = False
 
 default pile = 0
+
+#Encounters
+
+default leftovers = False
