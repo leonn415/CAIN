@@ -105,9 +105,9 @@ label normal_7:
 
     scene bg cabin night
 
-    "Your eyes snap open.{pause}and a dark ceiling greets your vision.{pause}You’re back in the cabin.{pause}Or rather.{pause}you never left."
+    "Your eyes snap open,{pause}and a dark ceiling greets your vision.{pause}You’re back in the cabin.{pause}Or rather,{pause}you never left."
 
-    "The rough fabric bedding.{pause}heavy with sweat.{pause}wraps around your body like chains.{pause}You itch all over from a night spent in its cruel embrace."
+    "The rough fabric bedding,{pause}heavy with sweat,{pause}wraps around your body like chains.{pause}You itch all over from a night spent in its cruel embrace."
 
     "You sit up and take a look around as you throw the fabric from your raw skin.{pause}The cabin is still and serene.{pause}You hear only your raging heartbeat and heaving gasps."
 
