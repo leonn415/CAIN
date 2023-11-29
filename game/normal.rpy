@@ -105,13 +105,13 @@ label normal_7:
 
     scene bg cabin night
 
-    "Your eyes snap open, and a dark ceiling greets your vision. You’re back in the cabin. Or rather, you never left."
+    "Your eyes snap open{pause}and a dark ceiling greets your vision{pause}You’re back in the cabin{pause}Or rather{pause}you never left."
 
-    "The rough fabric bedding, heavy with sweat, wraps around your body like chains. You itch all over from a night spent in its cruel embrace."
+    "The rough fabric bedding{pause}heavy with sweat{pause}wraps around your body like chains{pause}You itch all over from a night spent in its cruel embrace."
 
-    "You sit up and take a look around as you throw the fabric from your raw skin. The cabin is still and serene. You hear only your raging heartbeat and heaving gasps."
+    "You sit up and take a look around as you throw the fabric from your raw skin{pause}The cabin is still and serene{pause}You hear only your raging heartbeat and heaving gasps."
 
-    "You lie back down and let the sheets cover you once more. You keep your gaze on the cabin’s entrance and drift once more into unconsciousness."
+    "You lie back down and let the sheets cover you once more{pause}You keep your gaze on the cabin’s entrance and drift once more into unconsciousness."
 
     scene black with dissolve
 
@@ -208,7 +208,7 @@ label normal_9:
 
     "You kneel down beside the young woman,{pause}holding her face down into the water until it stops bubbling."
 
-    "You flip her body over with a grunt.{pause}However, you are not met with her deformed face, but your own lifeless visage."
+    "You flip her body over with a grunt.{pause}However{pause}you are not met with her deformed face{pause}but your own lifeless visage."
 
     "{ellipsis}"
     #programmer could you put in a heartbeat sound effect & possibly make the screen pulse (if that’s a thing) answer: yes,{pause}that’s possible
