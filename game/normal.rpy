@@ -208,7 +208,7 @@ label normal_9:
 
     "You kneel down beside the young woman,{pause}holding her face down into the water until it stops bubbling."
 
-    "You flip her body over with a grunt.{pause}However.{pause}you are not met with her deformed face.{pause}but your own lifeless visage."
+    "You flip her body over with a grunt.{pause}However,{pause}you are not met with her deformed face,{pause}but your own lifeless visage."
 
     "{ellipsis}"
     #programmer could you put in a heartbeat sound effect & possibly make the screen pulse (if that’s a thing) answer: yes,{pause}that’s possible
