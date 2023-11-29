@@ -62,9 +62,9 @@ label normal_1:
     $ rehab = 0
     scene bg hamlet evening with dissolve
 
-    "As the sun creeps its way down the horizon{pause}an orange tinge bleeds into the forest."
+    "As the sun creeps its way down the horizon,{pause}an orange tinge bleeds into the forest."
 
-    "The trees and grasses{pause}all the various foliage about{pause}stain in the light{pause}appearing as if painted in odd hues{pause}The shades of color surround{pause}and they confound{pause}much like the villagers escorting you."
+    "The trees and grasses,{pause}all the various foliage about,{pause}stain in the light,{pause}appearing as if painted in odd hues.{pause}The shades of color surround,{pause}and they confound,{pause}much like the villagers escorting you."
 
     "These strange people have been corralling you,{pause}much like cattle{ellipsis}Not a word has been said of their intentions,{pause}and all the while they only circle,{pause}the weight of their stares behind you."
 
