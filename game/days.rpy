@@ -65,15 +65,15 @@ label visit:
     return
 
 label kids:
-    if defiance > 0 and not dumped and not leftovers:
+    if defiance > 0 and not dumped and (leftovers < 1) :
         "One of the children reaches for your meal,{pause}left untouched on the table.{pause}Her hand is immediately swatted away by the old man."
 
         "She opens her mouth.{pause}You expected her to squeal,{pause}but no sound comes out."
 
         "The bizarre entourage merely sits around you for a while before seeing themselves out."
 
-        $ leftovers = True
-    else:
+        $ leftovers += 1
+    elif leftovers == 1:
         "You know you’ve heard the children cry,{pause}so their silence now in your presence puzzles you."
 
         "All they’ve done in the cabin is play with dirt and dry grass."
@@ -86,11 +86,18 @@ label kids:
 
         "You remind yourself that whatever meat it is in your soup is too big to be a small animal."
 
+        $ leftovers += 1
+
         if hunger >= 4:
             "You scratch your stomach."
 
         "Your visitors leave again.{pause}You are left alone."
+    else:
+        "You know you’ve heard the children cry,{pause}so their silence now in your presence puzzles you."
 
+        "All they’ve done in the cabin is play with dirt and dry grass."
+
+        "This goes for what feels like hours before they leave again."
     return
 
 label exercise:

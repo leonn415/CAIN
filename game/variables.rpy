@@ -20,4 +20,4 @@ default pile = 0
 
 #Encounters
 
-default leftovers = False
+default leftovers = 0

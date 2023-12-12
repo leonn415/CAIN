@@ -22,6 +22,11 @@ label starvation_ending:
 
     "Ending (2/6)"
 
+    show qrcode with dissolve:
+        xalign 0.5
+
+    "Thank you for playing CAIN!{pause}Please fill out the feedback form to tell us what you thought of CAIN!"
+
     $ persistent.tl += 1
     $ MainMenu(confirm=False)()
 
@@ -37,6 +42,11 @@ label trip_ending:
     scene black with Dissolve(3)
 
     "Ending (3/6)"
+
+    show qrcode with dissolve:
+        xalign 0.5
+
+    "Thank you for playing CAIN!{pause}Please fill out the feedback form to tell us what you thought of CAIN!"
 
     $ persistent.tl += 1
     $ MainMenu(confirm=False)()
@@ -57,6 +67,11 @@ label weak_ending:
     scene black with Dissolve(3)
 
     "Ending (4/6)"
+
+    show qrcode with dissolve:
+        xalign 0.5
+
+    "Thank you for playing CAIN!{pause}Please fill out the feedback form to tell us what you thought of CAIN!"
 
     $ persistent.tl += 1
     $ MainMenu(confirm=False)()
@@ -82,6 +97,11 @@ label fall_ending:
     scene black with Dissolve(3)
 
     "Ending (5/6)"
+
+    show qrcode with dissolve:
+        xalign 0.5
+
+    "Thank you for playing CAIN!{pause}Please fill out the feedback form to tell us what you thought of CAIN!"
 
     $ persistent.tl += 1
     $ MainMenu(confirm=False)()
@@ -113,6 +133,11 @@ label cushioned_ending:
     "Fortunately for you,{pause}your brain is not a long trip from the nostrils.{pause}You will be relieved soon."
 
     "Ending (6/6)"
+
+    show qrcode with dissolve:
+        xalign 0.5
+
+    "Thank you for playing CAIN!{pause}Please fill out the feedback form to tell us what you thought of CAIN!"
 
     $ persistent.tl += 1
     $ MainMenu(confirm=False)()

@@ -56,10 +56,6 @@ label intro:
     jump normal_1
 
 label normal_1:
-    $ day = 1
-    $ hunger = 0
-    $ defiance = 0
-    $ rehab = 0
     scene bg hamlet evening with dissolve
 
     "As the sun creeps its way down the horizon,{pause}an orange tinge bleeds into the forest."
