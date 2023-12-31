@@ -241,6 +241,7 @@ label normal_ending:
 
     "Normal Ending"
 
+    call credits
     #show qrcode with dissolve:
         #xalign 0.5
 

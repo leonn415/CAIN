@@ -27,6 +27,7 @@ label starvation_ending:
 
     "Thank you for playing CAIN!{pause}Please fill out the feedback form to tell us what you thought of CAIN!"
 
+    call credits
     $ persistent.tl += 1
     $ MainMenu(confirm=False)()
 
@@ -48,6 +49,7 @@ label trip_ending:
 
     "Thank you for playing CAIN!{pause}Please fill out the feedback form to tell us what you thought of CAIN!"
 
+    call credits
     $ persistent.tl += 1
     $ MainMenu(confirm=False)()
 label weak_ending:
@@ -73,6 +75,7 @@ label weak_ending:
 
     "Thank you for playing CAIN!{pause}Please fill out the feedback form to tell us what you thought of CAIN!"
 
+    call credits
     $ persistent.tl += 1
     $ MainMenu(confirm=False)()
 
@@ -103,6 +106,7 @@ label fall_ending:
 
     "Thank you for playing CAIN!{pause}Please fill out the feedback form to tell us what you thought of CAIN!"
 
+    call credits
     $ persistent.tl += 1
     $ MainMenu(confirm=False)()
 
@@ -139,5 +143,6 @@ label cushioned_ending:
 
     "Thank you for playing CAIN!{pause}Please fill out the feedback form to tell us what you thought of CAIN!"
 
+    call credits
     $ persistent.tl += 1
     $ MainMenu(confirm=False)()
