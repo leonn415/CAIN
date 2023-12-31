@@ -6,7 +6,7 @@ label credits:
         xanchor 0.5 xpos 0.5
     with dissolve
     with Pause(3)
-    hide theend
+    hide theend with dissolve
 
     # Change the y-position of the first point to be bigger as the credits list grows.
     show cred at Move((0.5, 3.0), (0.5, 0.0), credits_speed, repeat=False, bounce=False, xanchor="center", yanchor="bottom")
@@ -16,7 +16,7 @@ label credits:
         xanchor 0.5 xpos 0.5
     with dissolve
     with Pause(3)
-    hide thanks
+    hide thanks with dissolve
     return
 
 init python:
