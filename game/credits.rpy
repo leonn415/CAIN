@@ -1,3 +1,6 @@
+# Not really sure where this fits in the credits but they should be credited
+# Ren'py forum user "leon" made most of the code for these scrolling credits
+
 label credits:
     $ credits_speed = 25 # scrolling speed in seconds
     scene black with dissolve
