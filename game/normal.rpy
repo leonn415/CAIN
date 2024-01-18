@@ -10,6 +10,8 @@ label normal_4:
 
     "You make your way back to the bed and slowly drift into sleep."
 
+    $ _dismiss_pause = False
+
     scene black with Dissolve(1)
 
     scene bg cabin day with Dissolve(1)
@@ -66,20 +68,30 @@ label normal_5:
 
     "At the last moment,{pause}however,{pause}she hesitates as her eyes flicker with a hint of emotion.{pause}Was there a chance that she could sympathize with you?"
 
+    show girl touched
+
     "For what seems like an eternity,{pause}the room fills with a heavy silence.{pause}You stare at her,{pause}eyes wide as her wrist is just a touch away from your face."
 
-    #if persistent.tl > 1:
-        #menu:
-            #"Grab her":
-                #pass
-            #"Stay still":
-                #pass
+    if favor >= 4:
+        menu:
+            #"Caress her skin folds":
+                #$ favor += 1
+                #jump days2
+            "Grab her":
+                jump days2
+            "Stay still":
+                pass
 
     s "Won’t you take pity on me?{pause}I just want a friend."
 
     "The woman instantly retracts her wrist.{pause}Her eyes widen for a moment as she staggers back and hurriedly rushes out of the cabin."
 
+    if not normalrun:
+        "Seems like you've failed to gain her favor,{pause}perhaps you should've swallow your pride and tried harder."
+
     hide girl
+
+    $ _dismiss_pause = False
 
     scene black with Dissolve(0.9)
 
@@ -88,8 +100,6 @@ label normal_5:
 label normal_6:
 
     scene black
-
-    #scene bg void(?)
 
     "You open your eyes only to see an unending void,{pause}darkness stretching out in every direction."
 
@@ -113,13 +123,17 @@ label normal_7:
 
     "You lie back down and let the sheets cover you once more.{pause}You keep your gaze on the cabin’s entrance and drift once more into unconsciousness."
 
-    scene black with dissolve
+    $ _dismiss_pause = False
+
+    scene black with Dissolve(0.9)
 
     jump normal_8_placeholder
 
 label normal_8_placeholder:
 
-    scene bg cabin morning
+    $ _dismiss_pause = False
+
+    scene bg cabin morning with Dissolve(0.9)
 
     show particleFog
 
@@ -135,7 +149,7 @@ label normal_8_placeholder:
 
     v "Quick!{pause}Everyone form groups of three and search!"
 
-    if persistent.tl > 1 and defiance >= 6:
+    if not normalrun and defiance >= 6:
         jump malnurished_ending
 
     "You are hanging from the inner edge of the pit latrine.{pause}As the hurried footsteps grow distant,{pause}you push the toilet seat away and pull yourself up."
@@ -152,8 +166,8 @@ label normal_9:
 
     show particleFog
 
-    if persistent.tl > 1 and rehab <= 2:
-        jump trip_ending
+    if not normalrun and rehab <= 2:
+        jump m_ending
 
     "The hamlet fades into the distance as you stagger deep into the forest,{pause}not once looking back."
 
@@ -201,8 +215,8 @@ label normal_9:
         "Crack her skull":
             pass
 
-    if persistent.tl > 1 and rehab <= 4:
-            jump weak_ending
+    if not normalrun and rehab <= 4:
+            jump l_ending
 
     "She lets out a tiny yelp before she falls face-first into the river."
 
@@ -224,6 +238,8 @@ label normal_9:
 label normal_ending:
 
     $ persistent.tl += 1
+    $ persistent.normal_end = True
+    $ _dismiss_pause = False
 
     scene black with Dissolve(3)
 
@@ -239,10 +255,10 @@ label normal_ending:
 
     "The face on the body is that of a deformed young woman."
 
-    "Normal Ending"
+    show theend:
+        yanchor 0.5 ypos 0.5
+        xanchor 0.5 xpos 0.5
+    with dissolve
+    $ renpy.pause(3, hard=True)
 
-    call credits
-    #show qrcode with dissolve:
-        #xalign 0.5
-
-    #"Thank you for playing CAIN!{pause}Please fill out the feedback form to tell us what you thought of CAIN!"
+    call credits from _call_credits

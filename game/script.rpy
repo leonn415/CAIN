@@ -10,6 +10,7 @@ define i = Character(what_italic = True)
 define y = Character("Young Woman")
 define v = Character("Villager")
 define o = Character("Elderly Man")
+$ _dismiss_pause = False
 
 init python:
     # Define a custom text tag ("pause") that slows down the text speed by 90%
@@ -24,11 +25,40 @@ init python:
     config.self_closing_custom_text_tags["ellipsis"] = ellipsis_tag
 
 label start:
-    if persistent.tl == 1:
+    #If this is the first time "start" has been pressed
+    if not persistent.normal_end:
         jump intro
+    #If this isn't
     else:
+        scene blank
+
+        menu:
+            "Are you a new player?"
+            "Yes":
+                $ persistent._clear(progress=False)
+                $ persistent.tl = 1
+                $ delete_all_saves()
+                $ normalrun = True
+                jump intro
+            "No":
+                pass
+        $ normalrun = False
         jump normal_1
 label intro:
+    scene blank
+
+    "Leon" "Hi.{pause}I'm the lead of this game,{pause}but I can't to make it to the opening showcase,{pause}so here's what you need to know."
+
+    "Leon" "There are multiple endings to this game,{pause}and it takes a lot of reading,{pause}but feel free to stop anytime by returning to the main menu."
+
+    "Leon" "You'll reach the \"Normal Ending\" first.{pause}Pressing \"Start\" again will allow you to explore 7 other new routes."
+
+    "Leon" "To be honest,{pause}I don't know how to completely restart the game without asking the volunteer at the table to reopen it every time.{pause}So please just avoid the skip button on your first playthrough,{pause}because it'll just skip almost everything,{pause}haha."
+
+    "Leon" "If you accidentally do it,{pause}you can always scroll up and go back.{pause}Also,{pause}of you are aiming for different endings,{pause}you might want to use the \"Save\" function starting on your second playthrough."
+
+    "Leon" "I hope you have fun,{pause}and,{pause}if you will,{pause}leave some comments in the review form.{pause}Thanks."
+
     scene intro 1
     pause
     scene black with dissolve
@@ -64,6 +94,8 @@ label normal_1:
 
     "These strange people have been corralling you,{pause}much like cattle{ellipsis}Not a word has been said of their intentions,{pause}and all the while they only circle,{pause}the weight of their stares behind you."
 
+    "You put the burden of your leg and the rest of your body onto a bloodied spear,{pause}leaving an odd trail in the mud."
+
     "You are,{pause}at length,{pause}brought along a weathered bridge and toward a barren hamlet.{pause}It is as if the threshold of the bridge protected all behind it from terrible blight.{pause}Ahead,{pause}shriveled,{pause}gnarled and dead trees dot between the hovels."
 
     "Yellow weeds graze against your boots as you are led down a path.{pause}The silence of their march was sparsely interrupted by the wailing of children and the pallid squawking of birds."
@@ -76,7 +108,7 @@ label normal_2:
 
     "You are led to a cabin near the center of the hamlet.{pause}The door is opened with a creak and you are herded in."
 
-    "The cabin is small but surprisingly well–equipped.{pause}There’s a straw bed,{pause}a table,{pause}and a few chairs.{pause}More impressively,{pause}there seems to be an indoor pit latrine behind some wooden boards."
+    "The cabin is small but surprisingly well-equipped.{pause}There’s a straw bed,{pause}a table,{pause}and a few chairs.{pause}More impressively,{pause}there seems to be an indoor pit latrine behind some wooden boards."
 
     "You drag your body to the bed and sit down slowly.{pause}The sharp pain resurges now that you are able to relax.{pause}You really need to check your leg."
 
@@ -138,7 +170,7 @@ label normal_3:
 
     "You drag your body to the table and pick up the bowl in front of you.{pause}Pieces of meat rock back and forth in the thin liquid."
 
-    if persistent.tl == 1:
+    if normalrun:
         jump normal_4
     else:
         jump days

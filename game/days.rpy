@@ -1,4 +1,5 @@
 #this label represents the day cycle in the game
+#eat is called 10 times
 label days:
     #night
     if day == 6:
@@ -7,7 +8,8 @@ label days:
     if day > 1:
         show girl neutral
         "The young woman is here with another bowl of warm soup."
-        call make_convo
+        $ dumped = False
+        call make_convo from _call_make_convo
     call eat from _call_eat
     #morning
     $ day += 1
@@ -18,8 +20,8 @@ label days:
         "The young woman has left your breakfast on the table."
     $ dumped = False
     call eat from _call_eat_1
-    call visit
-    call exercise
+    call visit from _call_visit
+    call exercise from _call_exercise
     jump days
 
 label visit:
@@ -45,14 +47,14 @@ label visit:
 
         "You call out to them,{pause}but they only look at you wide-eyed.{pause}You wonder if they even know how to speak."
 
-        call kids
+        call kids from _call_kids
 
     elif day == 4:
         show oldman neutral
 
         "Today he's brought different kids than yesterday.{pause}You wonder if it's some rotated schedule."
 
-        call kids
+        call kids from _call_kids_1
     elif day == 5:
         show oldman neutral
 
@@ -61,24 +63,29 @@ label visit:
     elif day == 6:
         "The old man didn't come today."
 
-    hide oldman neutral
+    hide oldman neutral with dissolve
     return
 
 label kids:
     if defiance > 0 and not dumped and (leftovers < 1) :
+        hide oldman neutral
+        show kid neutral
         "One of the children reaches for your meal,{pause}left untouched on the table.{pause}Her hand is immediately swatted away by the old man."
 
         "She opens her mouth.{pause}You expected her to squeal,{pause}but no sound comes out."
 
         "The bizarre entourage merely sits around you for a while before seeing themselves out."
 
+        hide kid neutral with dissolve
+
         $ leftovers += 1
     elif leftovers == 1:
+
         "You know you’ve heard the children cry,{pause}so their silence now in your presence puzzles you."
 
         "All they’ve done in the cabin is play with dirt and dry grass."
 
-        i "is that{ellipsis}a bone?"
+        i "Is that{ellipsis}a bone?"
 
         "A girl is wearing a small ribcage on her finger like a ring."
 
@@ -103,19 +110,18 @@ label kids:
 label exercise:
     "You unwrap the fabric on your leg and examine the bruises."
 
-    if heal <= 2:
+    if heal == 0:
         "It's rather gnarly,{pause}the huge wound on your leg is barely starting to scab.{pause}The pain stops you from even contracting the muscles."
         if hunger <= 2:
             "Perhaps you need more food to heal."
-
-    elif heal <= 4:
+    elif heal <= 3:
         "You can lift your leg by a little now,{pause}though it still causes you great pain."
         menu:
             "Exercise":
                 $ rehab += 1
             "Leave it":
                 $ heal += 1
-    elif heal >= 5:
+    elif heal <= 5:
         "You can use the leg to stand now,{pause}albeit still needing the help of the stick."
         menu:
             "Exercise":

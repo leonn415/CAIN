@@ -81,6 +81,25 @@ style frame:
 ## In-game screens
 ################################################################################
 
+## Splash Screen ###############################################################
+
+image splash1 = "Splash1.png"
+image splash2 = "Splash2.png"
+
+label splashscreen:
+    scene black
+    with Pause(1)
+
+    show splash1 with dissolve
+    with Pause(3)
+
+    show splash2 with dissolve
+    with Pause(3)
+
+    scene black with dissolve
+    with Pause(1)
+
+    return
 
 ## Say screen ##################################################################
 ##
@@ -314,6 +333,8 @@ screen navigation():
 
         textbutton _("Preferences") action ShowMenu("preferences")
 
+        textbutton _("Credits") action ShowMenu("credits")
+
         if _in_replay:
 
             textbutton _("End Replay") action EndReplay(confirm=True)
@@ -334,6 +355,7 @@ screen navigation():
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
             textbutton _("Quit") action Quit(confirm=not main_menu)
+
 
 
 style navigation_button is gui_button
@@ -659,7 +681,7 @@ screen file_slots(title):
 
                 spacing gui.page_spacing
 
-                textbutton _("<") action FilePagePrevious()
+                textbutton _("Previous") action FilePagePrevious()
 
                 if config.has_autosave:
                     textbutton _("{#auto_page}A") action FilePage("auto")
@@ -671,7 +693,7 @@ screen file_slots(title):
                 for page in range(1, 10):
                     textbutton "[page]" action FilePage(page)
 
-                textbutton _(">") action FilePageNext()
+                textbutton _("Next") action FilePageNext()
 
 
 style page_label is gui_label
