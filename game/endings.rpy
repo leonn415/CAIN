@@ -27,7 +27,7 @@ label days2:
 
     "Leon" "When you are finished,{pause}please spare some comments for us,{pause}thank you so much!"
 
-    call QR from _call_QR
+    #call QR from _call_QR
     $ persistent.tl += 1
     $ MainMenu(confirm=False)()
 
@@ -50,7 +50,7 @@ label s_ending:
     scene onlayer blurry
     scene black with Dissolve(3)
 
-    call QR from _call_QR_1
+    #call QR from _call_QR_1
     $ persistent.tl += 1
     $ MainMenu(confirm=False)()
 
@@ -77,7 +77,7 @@ label m_ending:
     scene onlayer blurry
     scene black with Dissolve(3)
 
-    call QR from _call_QR_2
+    #call QR from _call_QR_2
     $ persistent.tl += 1
     $ MainMenu(confirm=False)()
 #rehab <= 4
@@ -108,7 +108,7 @@ label l_ending:
     "For Loser"
     scene onlayer blurry
 
-    call QR from _call_QR_3
+    #call QR from _call_QR_3
     $ persistent.tl += 1
     $ MainMenu(confirm=False)()
 
@@ -142,7 +142,7 @@ label f_ending:
     scene onlayer blurry
     scene black with Dissolve(3)
 
-    call QR from _call_QR_4
+    #call QR from _call_QR_4
     $ persistent.tl += 1
     $ MainMenu(confirm=False)()
 
@@ -189,16 +189,16 @@ label e_ending:
 
 #For play testing
 #Uncomment all instances of this this at demos
-label QR:
-    scene blank with dissolve
-    show qrcode:
-        xalign 0.5
-        yalign 0.25
+#label QR:
+    #scene blank with dissolve
+    #show qrcode:
+        #xalign 0.5
+        #yalign 0.25
 
-    "Thank you for playing CAIN!{pause}Please fill out the feedback form for any comments and suggestions."
-    return
+    #"Thank you for playing CAIN!{pause}Please fill out the feedback form for any comments and suggestions."
+    #return
 
-init python:
-    def delete_all_saves():
-        for savegame in renpy.list_saved_games(fast=True):
-            renpy.unlink_save(savegame)
+#init python:
+    #def delete_all_saves():
+        #for savegame in renpy.list_saved_games(fast=True):
+            #renpy.unlink_save(savegame)

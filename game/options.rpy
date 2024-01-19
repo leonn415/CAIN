@@ -23,7 +23,7 @@ define gui.show_name = True
 
 ## The version of the game.
 
-define config.version = "Spring2024OpeningShowcase"
+define config.version = "Spring2024VGDev"
 
 
 ## Text that is placed on the game's about screen. Place the text between the

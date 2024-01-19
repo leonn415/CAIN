@@ -26,39 +26,13 @@ init python:
 
 label start:
     #If this is the first time "start" has been pressed
-    if not persistent.normal_end:
+    if persistent.tl ==1:
         jump intro
     #If this isn't
     else:
-        scene blank
-
-        menu:
-            "Are you a new player?"
-            "Yes":
-                $ persistent._clear(progress=False)
-                $ persistent.tl = 1
-                $ delete_all_saves()
-                $ normalrun = True
-                jump intro
-            "No":
-                pass
         $ normalrun = False
         jump normal_1
 label intro:
-    scene blank
-
-    "Leon" "Hi.{pause}I'm the lead of this game,{pause}but I can't to make it to the opening showcase,{pause}so here's what you need to know."
-
-    "Leon" "There are multiple endings to this game,{pause}and it takes a lot of reading,{pause}but feel free to stop anytime by returning to the main menu."
-
-    "Leon" "You'll reach the \"Normal Ending\" first.{pause}Pressing \"Start\" again will allow you to explore 7 other new routes."
-
-    "Leon" "To be honest,{pause}I don't know how to completely restart the game without asking the volunteer at the table to reopen it every time.{pause}So please just avoid the skip button on your first playthrough,{pause}because it'll just skip almost everything,{pause}haha."
-
-    "Leon" "If you accidentally do it,{pause}you can always scroll up and go back.{pause}Also,{pause}of you are aiming for different endings,{pause}you might want to use the \"Save\" function starting on your second playthrough."
-
-    "Leon" "I hope you have fun,{pause}and,{pause}if you will,{pause}leave some comments in the review form.{pause}Thanks."
-
     scene intro 1
     pause
     scene black with dissolve
